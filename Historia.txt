@@ -1,0 +1,4 @@
+Dado que há muitos comprovantes de pagamento advindos de diferentes fontes(tanto de forma fisico ou digital),
+de forma que quando queremos uma organizacao dos mesmos ou apenas fazer uma consulta de emergência, 
+fica dificil a manipulacao.
+Esta aplicação destina a organizar os comprovantes de pagamentos por categoria, 
