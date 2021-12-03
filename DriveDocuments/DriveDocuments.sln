@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9678122A-1EE8-4E12-98CF-7F07816E6175}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveDocuments.Domain", "DriveDocuments.Domain\DriveDocuments.Domain.csproj", "{847CA4C3-1A73-4884-861E-DA3FBCDC6F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriveDocuments.Domain", "DriveDocuments.Domain\DriveDocuments.Domain.csproj", "{847CA4C3-1A73-4884-861E-DA3FBCDC6F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveDocuments.Tests", "DriveDocuments.Tests\DriveDocuments.Tests.csproj", "{EB8492F9-AC16-413D-B603-00443FBC04D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{847CA4C3-1A73-4884-861E-DA3FBCDC6F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{847CA4C3-1A73-4884-861E-DA3FBCDC6F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{847CA4C3-1A73-4884-861E-DA3FBCDC6F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8492F9-AC16-413D-B603-00443FBC04D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8492F9-AC16-413D-B603-00443FBC04D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8492F9-AC16-413D-B603-00443FBC04D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8492F9-AC16-413D-B603-00443FBC04D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{847CA4C3-1A73-4884-861E-DA3FBCDC6F53} = {9678122A-1EE8-4E12-98CF-7F07816E6175}
+		{EB8492F9-AC16-413D-B603-00443FBC04D7} = {9678122A-1EE8-4E12-98CF-7F07816E6175}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78F5FA1A-D57D-456F-988F-C3B23898989C}
