@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DriveDocuments.Domain.Commands.RequestComprovante
 {
-    class UpdateComprovanteRequest
+    public class UpdateComprovanteRequest
     {
     }
 }

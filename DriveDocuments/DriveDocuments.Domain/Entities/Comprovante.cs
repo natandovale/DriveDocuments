@@ -15,6 +15,12 @@ namespace DriveDocuments.Domain.Entities
         {
         }
 
+        public Comprovante(int id, string fileName)
+        {
+            Id = id;
+            FileName = fileName;
+        }
+
         public Comprovante(string nome, string beneficiario, DateTime dataCriacao, string uriImage, string fileName)
         {
             Nome = nome;
