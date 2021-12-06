@@ -2,8 +2,8 @@
 
 namespace DriveDocuments.Domain.Handlers.Interfaces
 {
-    public interface ICreateComprovanteHandler
+    public interface IRequestHandler<T>
     {
-        void Handler(CreateComprovanteRequest command);
+        void Handler(T command);
     }
 }

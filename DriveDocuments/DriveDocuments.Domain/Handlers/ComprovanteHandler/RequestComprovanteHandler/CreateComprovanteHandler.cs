@@ -2,12 +2,13 @@
 using DriveDocuments.Domain.Entities;
 using DriveDocuments.Domain.Handlers.Interfaces;
 using DriveDocuments.Domain.Repositories.Interfaces;
+using DriveDocuments.Domain.Services;
 using System;
 using System.IO;
 
 namespace DriveDocuments.Domain.Handlers.ComprovanteHandler.RequestComprovanteHandler
 {
-    public class CreateComprovanteHandler : ICreateComprovanteHandler
+    public class CreateComprovanteHandler : IRequestHandler<CreateComprovanteRequest>
     {
         private readonly IComprovanteRepository _repository;
         public CreateComprovanteHandler(IComprovanteRepository repository)
@@ -19,10 +20,14 @@ namespace DriveDocuments.Domain.Handlers.ComprovanteHandler.RequestComprovanteHa
         {
             try
             {
-                //byte[] imagem = GetImage(command.ImagemCaminhoDoArquivo);
-                var comprovante = new Comprovante(command.Nome, command.ImagemCaminhoDoArquivo);
+                //Salva a imagem no azure stored e retorn a url
+                var blobsInformacoes = FileUpload.UploadBase64image(command.ImagemBase64, "demo");
+                var dataCriacao = DateTime.Now;
+
+                var comprovante = new Comprovante(command.Nome, command.Beneficiario, dataCriacao, blobsInformacoes.Uri, blobsInformacoes.Nome);
 
                 _repository.Create(comprovante);
+
             }catch (DirectoryNotFoundException e)
             {
                 Console.WriteLine(e.Message);
@@ -36,17 +41,5 @@ namespace DriveDocuments.Domain.Handlers.ComprovanteHandler.RequestComprovanteHa
                 Console.WriteLine(e.Message);
             }
         }
-        //private byte[] GetImage(string filePath)
-        //{
-        //    FileStream stream = new(filePath, FileMode.Open, FileAccess.Read);
-        //    BinaryReader reader = new(stream);
-
-        //    byte[] image = reader.ReadBytes((int)stream.Length);
-
-        //    reader.Close();
-        //    stream.Close();
-
-        //    return image;
-        //}
     }
 }
