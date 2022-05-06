@@ -10,6 +10,7 @@ namespace DriveDocuments.Domain.Entities
         public string FileName { get; set; }
         public string UriImagem { get; private set; }
         public DateTime DataCriacao { get; set; }
+        public DateTime DataAtualizacao { get; set; }
 
         public Comprovante()
         {
@@ -30,10 +31,12 @@ namespace DriveDocuments.Domain.Entities
             FileName = fileName;
         }
 
-        public Comprovante(string nome, string uriImage)
+        public Comprovante(int id, string nome, string beneficiario, DateTime dataAtualizacao)
         {
+            Id = id;
             Nome = nome;
-            UriImagem = uriImage;
+            Beneficiario = beneficiario;
+            DataAtualizacao = dataAtualizacao;
         }
     }
 }

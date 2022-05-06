@@ -13,7 +13,7 @@ namespace DriveDocuments.Domain.Services
     {
         public static void DeletaImagem(IInformacoes informacoes)
         {
-            var blobClient = new BlobClient("DefaultEndpointsProtocol=https;AccountName=testeblobs2;AccountKey=GObmWRPMhieC95GRe+Unj1a8zT38VpRbER4EL0W9g1MACnCGMEKaEO9rdSruokLvI55L5f4bJksrtu55EDGKaw==;EndpointSuffix=core.windows.net", "demo", informacoes.Nome);
+            var blobClient = new BlobClient("DefaultEndpointsProtocol=https;AccountName=testeblobs2;AccountKey=4Awje13gbiv1W4nVDPrcF8PNT/Gz7191XGow4GKCHO13SjiKna7ycUDkzPtn2zZzv43NBYuGKKAdZu7fe11s5A==;EndpointSuffix=core.windows.net", "demo", informacoes.Nome);
 
             blobClient.Delete();
         }

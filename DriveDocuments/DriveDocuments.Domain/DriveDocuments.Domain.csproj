@@ -8,9 +8,4 @@
     <PackageReference Include="Azure.Storage.Blobs" Version="12.10.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Commands\Resposnse\" />
-    <Folder Include="Commands\Resposnse\ResponseComprovante\" />
-  </ItemGroup>
-
 </Project>
